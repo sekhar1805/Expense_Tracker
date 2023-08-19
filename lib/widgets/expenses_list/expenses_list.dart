@@ -23,7 +23,9 @@ class ExpensesList extends StatelessWidget {
             horizontal: Theme.of(context).cardTheme.margin!.horizontal,
           ),
         ),
-        onDismissed: (direction) {},
+        onDismissed: (direction) {
+          onRemoveExpense(expenses[index]);
+        },
         child: ExpenseItem(expenses[index]),
       ),
     );
